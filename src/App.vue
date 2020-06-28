@@ -1,10 +1,12 @@
+<!-- テンプレート -->
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="Welcome to Your Bootstrap and Vue App"/>
   </div>
 </template>
 
+<!-- スクリプト -->
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 
@@ -16,6 +18,7 @@ export default {
 }
 </script>
 
+<!-- スタイル -->
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
