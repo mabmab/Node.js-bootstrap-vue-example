@@ -2,7 +2,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <button class="btn btn-primary" @click="clickButton">ボタン</button>
+    <b-button variant="primary" @click="clickButton">Button</b-button>
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     clickButton() {
-      alert('ボタンが押されました')
+      alert('Button pressed')
     }
   }
 }
