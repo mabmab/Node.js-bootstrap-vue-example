@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     clickButton() {
-      alert('Button pressed')
+      alert(`${this.msg} Button pressed`)
     }
   }
 }

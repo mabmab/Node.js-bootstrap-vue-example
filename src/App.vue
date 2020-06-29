@@ -1,6 +1,7 @@
 <!-- テンプレート -->
 <template>
   <div id="app">
+    <!-- ヘッダー -->
     <header>
       <b-collapse class="bg-dark" id="navbarHeader">
         <div class="container">
@@ -27,7 +28,7 @@
               <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
               <circle cx="12" cy="13" r="4"></circle>
             </svg>
-            <strong>Bootstrap and Vue</strong>
+            <strong>BootstrapVue</strong>
           </a>
           <b-button v-b-toggle.navbarHeader variant="outline-secondary">
             <span class="navbar-toggler-icon"></span>
@@ -35,9 +36,70 @@
         </div>
       </div>
     </header>
+    <!-- メイン -->
     <main role="main">
-      <img alt="Vue logo" src="./assets/logo.png">
-      <HelloWorld msg="Welcome to Your Bootstrap and Vue App"/>
+      <b-jumbotron header="BootstrapVue" lead="Bootstrap v4 Components for Vue.js 2">
+          <img alt="Vue logo" src="./assets/logo.png">
+          <HelloWorld msg="Welcome to BootstrapVue App"/>
+      </b-jumbotron>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <b-card
+              title="photo1"
+              img-src="https://placekitten.com/300/300/"
+              img-alt="Image"
+              img-top
+              class="mb-2"
+            />
+          </div>
+          <div class="col-md-4">
+            <b-card
+              title="photo2"
+              img-src="https://placekitten.com/300/300/"
+              img-alt="Image"
+              img-top
+              class="mb-2"
+            />
+          </div>
+          <div class="col-md-4">
+            <b-card
+              title="photo3"
+              img-src="https://placekitten.com/300/300/"
+              img-alt="Image"
+              img-top
+              class="mb-2"
+            />
+          </div>
+          <div class="col-md-4">
+            <b-card
+              title="photo4"
+              img-src="https://placekitten.com/300/300/"
+              img-alt="Image"
+              img-top
+              class="mb-2"
+            />
+          </div>
+          <div class="col-md-4">
+            <b-card
+              title="photo5"
+              img-src="https://placekitten.com/300/300/"
+              img-alt="Image"
+              img-top
+              class="mb-2"
+            />
+          </div>
+          <div class="col-md-4">
+            <b-card
+              title="photo6"
+              img-src="https://placekitten.com/300/300/"
+              img-alt="Image"
+              img-top
+              class="mb-2"
+            />
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 </template>
