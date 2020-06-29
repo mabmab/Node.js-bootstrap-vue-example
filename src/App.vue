@@ -48,7 +48,7 @@
             <WeatherMap city="Tokyo"/>
           </div>
           <div class="col-md-4">
-            <WeatherMap city="Ohsaka"/>
+            <WeatherMap city="Osaka"/>
           </div>
           <div class="col-md-4">
             <WeatherMap city="Nagoya"/>
