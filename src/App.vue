@@ -45,58 +45,22 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <b-card
-              title="photo1"
-              img-src="https://placekitten.com/300/300/"
-              img-alt="Image"
-              img-top
-              class="mb-2"
-            />
+            <WeatherMap city="Tokyo"/>
           </div>
           <div class="col-md-4">
-            <b-card
-              title="photo2"
-              img-src="https://placekitten.com/300/300/"
-              img-alt="Image"
-              img-top
-              class="mb-2"
-            />
+            <WeatherMap city="Ohsaka"/>
           </div>
           <div class="col-md-4">
-            <b-card
-              title="photo3"
-              img-src="https://placekitten.com/300/300/"
-              img-alt="Image"
-              img-top
-              class="mb-2"
-            />
+            <WeatherMap city="Nagoya"/>
           </div>
           <div class="col-md-4">
-            <b-card
-              title="photo4"
-              img-src="https://placekitten.com/300/300/"
-              img-alt="Image"
-              img-top
-              class="mb-2"
-            />
+            <WeatherMap city="Fukuoka"/>
           </div>
           <div class="col-md-4">
-            <b-card
-              title="photo5"
-              img-src="https://placekitten.com/300/300/"
-              img-alt="Image"
-              img-top
-              class="mb-2"
-            />
+            <WeatherMap city="Sapporo"/>
           </div>
           <div class="col-md-4">
-            <b-card
-              title="photo6"
-              img-src="https://placekitten.com/300/300/"
-              img-alt="Image"
-              img-top
-              class="mb-2"
-            />
+            <WeatherMap city="Hamamatsu"/>
           </div>
         </div>
       </div>
@@ -107,11 +71,13 @@
 <!-- スクリプト -->
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import WeatherMap from './components/WeatherMap.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    WeatherMap
   }
 }
 </script>
