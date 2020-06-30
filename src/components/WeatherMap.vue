@@ -38,7 +38,8 @@ export default {
     async get_weather_map() {
         const abszero = -273.15; // 絶対零度
         var location = `${this.city},jp`;
-        var APIKEY = 'ec0564d1f5c57e84804899ecdf0f9bf8';
+        var APIKEY = process.env.OPENWEATHERMAP_APIKEY;
+        console.log(`APIKEY: ${APIKEY}`);
         var URL = 'https://api.openweathermap.org/data/2.5/weather';
 
         const params = {
