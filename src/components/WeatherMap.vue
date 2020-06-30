@@ -37,23 +37,18 @@ export default {
   methods: {
     async get_weather_map() {
         const abszero = -273.15; // 絶対零度
-        var location = `${this.city},jp`;
-        var APIKEY = process.env.OPENWEATHERMAP_APIKEY;
-        console.log(`APIKEY: ${APIKEY}`);
         var URL = 'https://api.openweathermap.org/data/2.5/weather';
-
         const params = {
-            q: location,
-            APPID: APIKEY
+            q: `${this.city},jp`,
+            APPID: process.env.VUE_APP_OPENWEATHERMAP_APIKEY
         }
-
         await axios.get(URL, { params })
         // thenで成功した場合の処理をかける
         .then(response => {
             console.log(`status: ${response.status}`);
             console.log(`location: ${response.data.name}`);
             console.log(`date: ${new Date(response.data.dt*1000).toLocaleDateString('ja-jp')}`);
-            console.log(`date: ${new Date(response.data.dt*1000).toLocaleTimeString('ja-jp')}`);
+            console.log(`time: ${new Date(response.data.dt*1000).toLocaleTimeString('ja-jp')}`);
             console.log('-----');
             console.log('body:', response.data);
             this.weather = response.data.weather[0].main;
