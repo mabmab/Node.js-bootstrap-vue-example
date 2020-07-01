@@ -2,23 +2,26 @@
 <template>
   <div class="weather-map">
     <b-card
-        v-bind:title="city"
-        img-src="https://placekitten.com/300/300/"
-        img-alt="Image"
-        img-top
-        class="mb-2"
+      :img-src="getImgUrl(icon)"
+      v-bind:img-alt="icon"
+      img-top
+      v-bind:title="city"
+      class="mb-2"
     >
-        <p>Weather: {{weather}}</p>
-        <p>Temperature: {{temperature}}</p>
-        <p>Humidity: {{humidity}}</p>
-        <p>Pressure: {{pressure}}</p>
+      <p>Weather: {{weather}}</p>
+      <p>Temperature: {{temperature}}</p>
+      <p>Humidity: {{humidity}}</p>
+      <p>Pressure: {{pressure}}</p>
     </b-card>
   </div>
 </template>
 
 <!-- スクリプト -->
 <script>
-import axios from 'axios'
+import axios from 'axios';
+var icon_sunny = 'f_f_traffic_7_s512_f_traffic_7_0bg';
+var icon_clouds = 'f_f_traffic_4_s512_f_traffic_4_0bg';
+var icon_rain = 'f_f_traffic_5_s512_f_traffic_5_0bg';
 
 export default {
   name: 'WeatherMap',
@@ -28,7 +31,8 @@ export default {
         weather: '???',
         temperature : '???',
         humidity: '???',
-        pressure: '???'
+        pressure: '???',
+        icon: icon_sunny
     };
   },
   props: {
@@ -52,6 +56,9 @@ export default {
             console.log('-----');
             console.log('body:', response.data);
             this.weather = response.data.weather[0].main;
+            if (this.weather === 'Rain') this.icon = icon_rain;
+            else if (this.weather === 'Clouds') this.icon = icon_clouds;
+            else this.icon = icon_sunny;
             this.temperature = `${(response.data.main.temp + abszero).toFixed(2)}(C)`;
             this.humidity = `${(response.data.main.humidity)}(%)`;
             this.pressure = `${(response.data.main.pressure)}(hp)`;
@@ -60,10 +67,14 @@ export default {
         ).catch(err => {
             console.log('err:', err);
         });
-    }
+    },
+    getImgUrl(name) {
+      var images = require.context('../assets/', false, /f_f_traffic.+\.png$/);
+      return images('./' + name + ".png");
+    },
   },
   async created() {
-      await this.get_weather_map();
+    await this.get_weather_map();
   }
 }
 </script>
