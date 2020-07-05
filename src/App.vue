@@ -42,28 +42,28 @@
           <img alt="Vue logo" src="./assets/logo.png">
           <HelloWorld msg="Welcome to BootstrapVue App"/>
       </b-jumbotron>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
+      <b-container>
+        <b-row>
+          <b-col xs="10" sm="6" md="4">
             <WeatherMap city="Tokyo"/>
-          </div>
-          <div class="col-md-4">
+          </b-col>
+          <b-col xs="10" sm="6" md="4">
             <WeatherMap city="Osaka"/>
-          </div>
-          <div class="col-md-4">
+          </b-col>
+          <b-col xs="10" sm="6" md="4">
             <WeatherMap city="Nagoya"/>
-          </div>
-          <div class="col-md-4">
+          </b-col>
+          <b-col xs="10" sm="6" md="4">
             <WeatherMap city="Fukuoka"/>
-          </div>
-          <div class="col-md-4">
+          </b-col>
+          <b-col xs="10" sm="6" md="4">
             <WeatherMap city="Sapporo"/>
-          </div>
-          <div class="col-md-4">
+          </b-col>
+          <b-col xs="10" sm="6" md="4">
             <WeatherMap city="Hamamatsu"/>
-          </div>
-        </div>
-      </div>
+          </b-col>
+        </b-row>
+      </b-container>
     </main>
   </div>
 </template>
