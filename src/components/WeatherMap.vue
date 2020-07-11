@@ -14,7 +14,8 @@
         <p>Humidity: {{humidity}}</p>
         <p>Pressure: {{pressure}}</p>
       </b-card>
-    </b-overlay>>
+    </b-overlay>
+    <p></p>
   </div>
 </template>
 
